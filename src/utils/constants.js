@@ -5,14 +5,18 @@ export const PERSONAL_INFO = {
   location: "San Francisco, CA",
   tagline: "Des- hghjfgdshfdhghdgfhdsgfhdsgfjsdgfhdsfgjhfdfhjkhfsjhsjdfdgfjgj",
   resume: "/resume.pdf",
-  bio: ["iufdsuhfudhfudshfuidsfduihfdsiufdsfhduhfsdihfudshfjkkcjhfhus"],
+  bio: [
+    "iufdsuhfudhfudshfuidsfduihfdsdsfdfdfdfdsfdfdffdfdfdfdfdfdfdfdfdfdfdfdfdiufdsuhfudhfudshfuidsfduihfdsdsfdfdfdfdsfdfdffdfdfdfdfdfdfdfdfdfdfdfdfd.",
+    "iufdsuhfudhfudshfuidsfduihfdsdsfdfdfdfdsfdfdffdfdfdfdfdfdfdfdfdfdfdfdfdiufdsuhfudhfudshfuidsfduihfdsdsfdfdfdfdsfdfdffdfdfdfdfdfdfdfdfdfdfdfdfd.",
+    "iufdsuhfudhfudshfuidsfduihfdsdsfdfdfdfdsfdfdffdfdfdfdfdfdfdfdfdfdfdfdfdiufdsuhfudhfudshfuidsfduihfdsdsfdfdfdfdsfdfdffdfdfdfdfdfdfdfdfdfdfdfdfd.",
+  ],
 };
 
 export const SOCIAL_LINKS = {
   github: "",
   linkedin: "",
-  indeed: "",
-  instagram: "",
+  twitter: "",
+  dribbble: "",
 };
 
 export const STATS = [
