@@ -38,7 +38,7 @@ const Footer = () => {
                   <div className="p-2 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-120 transition-transform duration-300">
                     <Mail className="w-4 h-4 text-primary" />
                   </div>
-                  <span className="text-white/70 text-sm group-hover:text-[#A8FF8D] transition-colors transition-colors">
+                  <span className="text-white/70 text-sm group-hover:text-[#A8FF8D] transition-colors">
                     {PERSONAL_INFO.email}
                   </span>
                 </a>
@@ -109,13 +109,13 @@ const Footer = () => {
         <FadeIn delay={300}>
           <div className="pt-8 border-t border-white/10">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <p className="text-white/50 text-sm">
+              <p className="text-white/50 text-sm hover:text-primary transition-all duration-300">
                 @ {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights
                 reserved.
               </p>
-              <p className="flex items-center gap-3 text-white/50 text-sm">
+              <p className="flex items-center gap-3 text-white/50 text-sm hover:text-primary transition-all duration-300">
                 Built with{" "}
-                <Heart className="w-4 h-4 text-primary fill-primary animate-pulse" />{" "}
+                <Heart className="w-4 h-4 text-primary fill-primary animate-pulse hover:scale-110" />{" "}
                 using React & Tailwind CSS
               </p>
             </div>
