@@ -29,7 +29,7 @@ export const projects = [
     description:
       "A mobile application that helps users track their health metrics, including weight, blood pressure and medication reminders.",
     image: "/images/projects/project3.png",
-    category: "Mobile App",
+    category: "Web Apps",
     technologies: ["React Native", "TypeScript", "Firebase", "Tailwind"],
     metrics: "1K+ downloads",
     demoUrl: "https://timetoprogram.com/projects",
@@ -99,7 +99,7 @@ export const projects = [
       "Flutter",
       "Ruby",
     ],
-    metrics: "100+ products",
+    metrics: "90% accuracy rate",
     demoUrl: "https://timetoprogram.com/projects",
     githubUrl:
       "https://github.com/it22318466/Smart-Learning-Assistant-App-.git",
@@ -110,7 +110,7 @@ export const projects = [
     description:
       "Full-stack wildlife photography platform with photo galleries, user authentication and portfolio management.",
     image: "/images/projects/Wildlife_Photography_Platform.png",
-    category: "Full Stack",
+    category: "Web Apps",
     technologies: [
       "React",
       "Node.js",
@@ -130,13 +130,13 @@ export const projects = [
   },
   {
     id: 10,
-    title: "Fashion Website",
+    title: "ALFAR Fashion Website",
     description:
       "A modern fashion website built with JS, PHP, CSS, Python and MySQL featuring responsive design, product listings and e-commerce functionality.",
     image: "/images/projects/Fashion_Website.png",
-    category: "Full Stack",
+    category: "UI Components",
     technologies: ["PHP", "MySQL", "API", "JS", "CSS", "HTML", "Python"],
-    metrics: "100+ products",
+    metrics: "200+ active users",
     demoUrl: "https://timetoprogram.com/projects",
     githubUrl:
       "https://github.com/it22318466/Fashion_WebSite_ALFAR_Company.git",
@@ -145,27 +145,42 @@ export const projects = [
     id: 11,
     title: "Employee Management System",
     description:
-      "A modern employee management system built with JS, PHP, CSS, Python and MySQL featuring responsive design, employee listings and management functionality.",
+      "A modern employee management system built with .NET Framework, C#, SQL, jQuery, ASP.NET, Bootstrap and SQL Server featuring responsive design, employee listings and management functionality.",
     image: "/images/projects/Employee_Management_System.png",
     category: "Full Stack",
-    technologies: ["PHP", "MySQL", "API", "JS", "CSS", "HTML", "Python"],
-    metrics: "100+ products",
+    technologies: [
+      ".NET Framework",
+      "C#",
+      "SQL",
+      "jQuery",
+      "ASP.NET",
+      "Bootstrap",
+      "SQL Server",
+    ],
+    metrics: "2K+ downloads",
     demoUrl: "https://timetoprogram.com/projects",
-    githubUrl:
-      "https://github.com/it22318466/Fashion_WebSite_ALFAR_Company.git",
+    githubUrl: "https://github.com/it22318466/EMS_Final_Project_Ditec210.git",
   },
   {
     id: 12,
-    title: "Smart Campus",
+    title: "Smart Campus Management System",
     description:
-      "A modern smart campus management system built with JS, PHP, CSS, Python and MySQL featuring responsive design, student listings and management functionality.",
-    image: "/images/projects/Smart_Campus.png",
-    category: "Full Stack",
-    technologies: ["PHP", "MySQL", "API", "JS", "CSS", "HTML", "Python"],
-    metrics: "100+ products",
+      "A modern smart campus management system built with React, Node.js, Express, API, JS, CSS and MongoDB featuring responsive design, student listings and management functionality.",
+    image: "/images/projects/Smart_Campus_Management_System.png",
+    category: "Web Apps",
+    technologies: [
+      "React",
+      "MongoDB",
+      "API",
+      "JS",
+      "CSS",
+      "Node.js",
+      "Express",
+    ],
+    metrics: "95% accuracy rate",
     demoUrl: "https://timetoprogram.com/projects",
     githubUrl:
-      "https://github.com/it22318466/Fashion_WebSite_ALFAR_Company.git",
+      "https://github.com/it22318466/Smart_Campus_Management_System.git",
   },
 ];
 
