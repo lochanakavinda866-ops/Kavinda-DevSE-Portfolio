@@ -1,5 +1,5 @@
 export const PERSONAL_INFO = {
-  name: "Lochana Kavinda",
+  name: "Kavinda Bandara",
   title: "Software Developer & UI/UX Enthusiast",
   email: "lochanabandara36@gmail.com",
   location: "Gampaha, Sri Lanka",

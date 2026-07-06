@@ -6,7 +6,7 @@ export const testimonials = [
     company: "TechStart Inc",
     image: "/images/testimonials/professional_person1.png",
     quote:
-      "Outstanding work on our React application. Alex delivered a high performance, scalable solution that exceeded our expectations. The attention to detail and code quality was exceptional.",
+      "Outstanding work on our React application. Kavinda delivered a high performance, scalable solution that exceeded our expectations. The attention to detail and code quality was exceptional.",
     rating: 5,
   },
   {
@@ -16,7 +16,7 @@ export const testimonials = [
     company: "Digital Innovations",
     image: "/images/testimonials/professional_person2.png",
     quote:
-      "Working with Alex was a game changer for our project. The UI components were beautifully designed and the implementation was flawless. Highly recommend for any React development needs.",
+      "Working with Kavinda was a game changer for our project. The UI components were beautifully designed and the implementation was flawless. Highly recommend for any React development needs.",
     rating: 5,
   },
   {
@@ -26,7 +26,7 @@ export const testimonials = [
     company: "StartupHub",
     image: "/images/testimonials/professional_person3.jpg",
     quote:
-      "Alex transformed our vision into reality with a stunning, user friendly interface. The project was delivered on time and the communication throughout was excellent. A true professional",
+      "Kavinda transformed our vision into reality with a stunning, user friendly interface. The project was delivered on time and the communication throughout was excellent. A true professional",
     rating: 5,
   },
   {
@@ -36,7 +36,7 @@ export const testimonials = [
     company: "WebSolutions C0",
     image: "/images/testimonials/professional_person4.jpg",
     quote:
-      "Incredible expertise in React and modern web technologies. Alex not only built our application but also provided valuable insights that improved our overall architecture. A pleasure to work with.",
+      "Incredible expertise in React and modern web technologies. Kavinda not only built our application but also provided valuable insights that improved our overall architecture. A pleasure to work with.",
     rating: 5,
   },
   {
@@ -46,7 +46,7 @@ export const testimonials = [
     company: "99 Technlogies",
     image: "/images/testimonials/professional_person5.jpg",
     quote:
-      "Alex delivered a top notch React application that exceeded our expectations. The attention to detail and code quality was exceptional. Highly recommended for any React development needs.",
+      "Kavinda delivered a top notch React application that exceeded our expectations. The attention to detail and code quality was exceptional. Highly recommended for any React development needs.",
     rating: 5,
   },
   {
@@ -56,7 +56,7 @@ export const testimonials = [
     company: "Digital TechSoft",
     image: "/images/testimonials/professional_person6.png",
     quote:
-      "The UI components were beautifully designed and the implementation was flawless. Alex's attention to detail and code quality was exceptional. Highly recommended for any Ui development needs.",
+      "The UI components were beautifully designed and the implementation was flawless. Kavinda's attention to detail and code quality was exceptional. Highly recommended for any Ui development needs.",
     rating: 5,
   },
 ];
