@@ -32,15 +32,17 @@ import {
   MedalIcon,
   AwardIcon,
   CloudCogIcon,
+  BookCheckIcon,
+  BookCopyIcon,
 } from "lucide-react";
 import FadeIn from "../animations/FadeIn";
 import { FaAmazon, FaJava, FaPython } from "react-icons/fa";
 import { VscAzureDevops } from "react-icons/vsc";
-import { DiGoogleCloudPlatform, DiJavascript } from "react-icons/di";
 import {
+  SiBmcsoftware,
   SiCss,
+  SiEsotericsoftware,
   SiExpress,
-  SiExpressvpn,
   SiGooglecloud,
   SiHtml5,
   SiJavascript,
@@ -56,22 +58,19 @@ import {
   SiSpringboot,
   SiSqlite,
   SiVercel,
+  SiWebflow,
   SiWinamp,
+  SiWorkplace,
   SiXampp,
   SiYaml,
 } from "react-icons/si";
-import { FaFlutter, FaNodeJs, FaReact, FaVuejs } from "react-icons/fa6";
-import { FcNext } from "react-icons/fc";
-import {
-  RiFirebaseFill,
-  RiNodejsFill,
-  RiNodejsLine,
-  RiSupabaseFill,
-} from "react-icons/ri";
+import { FaFlutter, FaReact, FaVuejs } from "react-icons/fa6";
+import { RiFirebaseFill, RiNodejsLine, RiSupabaseFill } from "react-icons/ri";
 import { TbBrandReactNative } from "react-icons/tb";
-import { BsJavascript } from "react-icons/bs";
-import { MdJavascript } from "react-icons/md";
+import { MdDeveloperMode } from "react-icons/md";
 import { GrMysql } from "react-icons/gr";
+import { IoColorPalette, IoColorPaletteOutline } from "react-icons/io5";
+import { TiVendorMicrosoft } from "react-icons/ti";
 
 const EducationalQualifications = () => {
   const qualifications = [
@@ -117,8 +116,16 @@ const EducationalQualifications = () => {
       year: "Graduate",
     },
     {
+      degree: "Diploma in Full Stack Development (DIFD)",
+      institution: "ICBS International - Canada",
+      location: "Canada",
+      grade: "Full Stack Developer & Development | Web Development",
+      icon: MdDeveloperMode,
+      year: "Graduate",
+    },
+    {
       degree: "DevOps Master Program (DSMP)",
-      institution: "DSMP",
+      institution: "DSMP, Developers Stack, Sri Lanka",
       location: "LK",
       grade: "Developers Stack & DevOps Engineer",
       icon: CloudCogIcon,
@@ -131,6 +138,97 @@ const EducationalQualifications = () => {
       grade: "Coding & Programmer",
       icon: Code2,
       year: "Studying",
+    },
+    {
+      degree: "Full Stack Developer Course",
+      institution: "University of Moratuwa",
+      location: "Moratuwa, LK",
+      grade: "Full Stack Developer",
+      icon: CodeSquare,
+      year: "Graduate",
+    },
+    {
+      degree: "Python Programmer Course",
+      institution: "University of Moratuwa",
+      location: "Moratuwa, LK",
+      grade: "Python Programmer",
+      icon: SiWorkplace,
+      year: "Graduate",
+    },
+    {
+      degree: "Mobile Developer Course",
+      institution: "University of Moratuwa",
+      location: "Moratuwa, LK",
+      grade: "Mobile Developer",
+      icon: Smartphone,
+      year: "Studying",
+    },
+    {
+      degree: "Web Developer Course",
+      institution: "University of Moratuwa",
+      location: "Moratuwa, LK",
+      grade: "Web Developer",
+      icon: SiWebflow,
+      year: "Studying",
+    },
+    {
+      degree: "Diploma in English (SEG) UK",
+      institution: "SEG UK, United Kingdom",
+      location: "United Kingdom",
+      grade: "Distinction",
+      icon: BookOpen,
+      year: "Graduate",
+    },
+    {
+      degree: "Pearson Diploma in English (DIE)",
+      institution: "Pearson UK, London",
+      location: "London, UK",
+      grade: "Distinction",
+      icon: BookCheckIcon,
+      year: "Graduate",
+    },
+    {
+      degree: "Certificate Course of Communication in English",
+      institution: "Sun - Vision Institute of English Training",
+      location: "Wellawaya, LK",
+      grade: "A",
+      icon: BookCopyIcon,
+      year: "Graduate",
+    },
+    {
+      degree: "Certificate in Office Applications Course",
+      institution: "Keenadeniya College ICT Education Center, Sri Lanka",
+      location: "LK",
+      grade: "A",
+      icon: TiVendorMicrosoft,
+      year: "Completed",
+    },
+    {
+      degree: "Zonal ICT (Digital Poster) Competition",
+      institution:
+        "Zonal Information Technology Unit, Minuwangoda Educational Zone",
+      location: "LK",
+      grade: "A",
+      icon: IoColorPaletteOutline,
+      year: "Completed",
+    },
+    {
+      degree: "Software Group Projects - Provincial Competition - 2012",
+      institution:
+        "Knowledge Society Project of Ministry of Education & Microsoft Sri Lanka",
+      location: "LK",
+      grade: "2nd place",
+      icon: SiEsotericsoftware,
+      year: "Completed",
+    },
+    {
+      degree: "Software Group Projects - Provincial Competition - 2011",
+      institution:
+        "Knowledge Society Project of Ministry of Education & Microsoft Sri Lanka",
+      location: "LK",
+      grade: "Winning Team",
+      icon: SiBmcsoftware,
+      year: "Completed",
     },
   ];
 
@@ -315,9 +413,9 @@ const EducationalQualifications = () => {
                       <div
                         className={`px-3 py-1 rounded-full text-xs font-medium ${
                           qual.grade === "First Class" || qual.grade === "A"
-                            ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                            ? "bg-[#88F565]/20 text-[#88F565] border border-[#88F565]/40"
                             : qual.grade === "Merit"
-                              ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                              ? "bg-[#D31223]/20 text-[#D31223] border border-[#D31223]/40"
                               : "bg-purple-500/20 text-purple-400 border border-purple-500/30"
                         }`}
                       >
