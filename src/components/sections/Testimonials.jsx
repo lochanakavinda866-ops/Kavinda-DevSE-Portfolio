@@ -31,9 +31,16 @@ const Testimonials = () => {
   useEffect(() => {
     const unsubscribe = subscribeToTestimonials((firebaseTestimonials) => {
       if (firebaseTestimonials.length > 0) {
+        // Sort Firebase testimonials by createdAt (newest first)
+        const sortedFirebaseTestimonials = firebaseTestimonials.sort(
+          (a, b) => b.createdAt - a.createdAt,
+        );
         // Combine Firebase testimonials with default ones
         // Firebase testimonials come first (newest)
-        const combined = [...firebaseTestimonials, ...defaultTestimonials];
+        const combined = [
+          ...sortedFirebaseTestimonials,
+          ...defaultTestimonials,
+        ];
         setTestimonials(combined);
         setIsFirebaseConfigured(true);
       } else {
