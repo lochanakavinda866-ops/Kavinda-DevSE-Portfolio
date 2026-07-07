@@ -12,7 +12,8 @@ const Testimonials = () => {
     const storedTestimonials = localStorage.getItem("userTestimonials");
     if (storedTestimonials) {
       const userTestimonials = JSON.parse(storedTestimonials);
-      return [...defaultTestimonials, ...userTestimonials];
+      // Reverse user testimonials so newest appear first
+      return [...userTestimonials.reverse(), ...defaultTestimonials];
     }
     return defaultTestimonials;
   };
@@ -122,11 +123,11 @@ const Testimonials = () => {
     const userTestimonials = storedTestimonials
       ? JSON.parse(storedTestimonials)
       : [];
-    userTestimonials.push(newTestimonial);
+    userTestimonials.unshift(newTestimonial);
     localStorage.setItem("userTestimonials", JSON.stringify(userTestimonials));
 
-    // Update state
-    setTestimonials([...testimonials, newTestimonial]);
+    // Update state - add new testimonial at the beginning
+    setTestimonials([newTestimonial, ...testimonials]);
 
     // Reset form
     setFormData({
