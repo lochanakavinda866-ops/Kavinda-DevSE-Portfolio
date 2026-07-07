@@ -520,10 +520,10 @@ const Testimonials = () => {
                                 onClick={() =>
                                   handleDeleteTestimonial(testimonial.id)
                                 }
-                                className="absolute top-4 right-4 p-2 bg-red-500/20 border border-red-500/50 rounded-full hover:bg-red-500/40 transition-all duration-300 cursor-pointer"
+                                className="absolute top-3 right-3 p-2 bg-red-500/20 border border-red-500/50 rounded-full hover:bg-red-500/40 transition-all duration-300 cursor-pointer"
                                 title="Delete testimonial"
                               >
-                                <X className="w-4 h-4 text-red-400" />
+                                <X className="w-2.5 h-2.5 text-red-400" />
                               </button>
                             )}
                           </div>
