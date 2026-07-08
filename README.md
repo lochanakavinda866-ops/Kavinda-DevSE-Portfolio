@@ -1,4 +1,4 @@
-# Kavinda DevSE Portfolio
+# Kavinda Dev Portfolio
 
 A modern, responsive developer portfolio website built with React, Vite, and Tailwind CSS. Showcase your professional skills, projects, and achievements in an elegant and interactive way.
 
@@ -28,15 +28,15 @@ A modern, responsive developer portfolio website built with React, Vite, and Tai
 
 ## 🛠️ Tech Stack
 
-| Technology | Purpose |
-|-----------|---------|
-| **React** | UI framework (v19.2.4) |
-| **Vite** | Build tool and dev server (v8.0.1) |
+| Technology       | Purpose                              |
+| ---------------- | ------------------------------------ |
+| **React**        | UI framework (v19.2.4)               |
+| **Vite**         | Build tool and dev server (v8.0.1)   |
 | **Tailwind CSS** | Utility-first CSS framework (v4.2.2) |
-| **EmailJS** | Email service integration (v4.4.1) |
-| **React Icons** | Icon library (v5.6.0) |
-| **Lucide React** | Modern icon set (v1.7.0) |
-| **ESLint** | Code quality and linting |
+| **EmailJS**      | Email service integration (v4.4.1)   |
+| **React Icons**  | Icon library (v5.6.0)                |
+| **Lucide React** | Modern icon set (v1.7.0)             |
+| **ESLint**       | Code quality and linting             |
 
 ---
 
@@ -86,17 +86,20 @@ Kavinda-Dev-Portfolio/
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/it22318466/Kavinda-Dev-Portfolio.git
    cd Kavinda-Dev-Portfolio
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Start the development server:**
+
    ```bash
    npm run dev
    ```
@@ -153,6 +156,7 @@ Tailwind CSS is pre-configured. Customize your design by:
 ### Deploy to GitHub Pages
 
 1. Build the project:
+
    ```bash
    npm run build
    ```
@@ -175,17 +179,20 @@ Tailwind CSS is pre-configured. Customize your design by:
 ## 🐛 Troubleshooting
 
 **Port 5173 already in use:**
+
 ```bash
 npm run dev -- --port 3000
 ```
 
 **Dependencies not installing:**
+
 ```bash
 rm -rf node_modules package-lock.json
 npm install
 ```
 
 **Vite build errors:**
+
 ```bash
 npm run build -- --force
 ```
