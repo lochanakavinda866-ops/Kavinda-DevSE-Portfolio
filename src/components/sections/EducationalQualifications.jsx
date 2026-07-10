@@ -603,7 +603,7 @@ const EducationalQualifications = () => {
           <div className="mb-16">
             <h3 className="text-2xl font-semibold text-white mb-8 flex items-center gap-3">
               <Zap className="w-6 h-6 text-primary" />
-              Interests & Current Focus
+              🎯 Interests & Current Focus
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-r from-white/5 to-white/10 border border-white/10 rounded-2xl p-6">
@@ -660,7 +660,7 @@ const EducationalQualifications = () => {
           <div className="mb-16">
             <h3 className="text-2xl font-semibold text-white mb-8 flex items-center gap-3">
               <Sparkles className="w-6 h-6 text-primary" />
-              💻 Passions
+              ⧼⧽ Passions
             </h3>
             <div className="bg-gradient-to-r from-white/5 to-white/10 border border-white/10 rounded-2xl p-8">
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
