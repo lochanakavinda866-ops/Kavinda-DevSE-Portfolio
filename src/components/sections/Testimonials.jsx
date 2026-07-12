@@ -27,6 +27,19 @@ const Testimonials = () => {
   const [imagePreview, setImagePreview] = useState(null);
   const [formStatus, setFormStatus] = useState({ type: "", message: "" });
 
+  // Get or create a unique user ID for this browser
+  const getUserId = () => {
+    let userId = localStorage.getItem("testimonial_user_id");
+    if (!userId) {
+      userId =
+        "user_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9);
+      localStorage.setItem("testimonial_user_id", userId);
+    }
+    return userId;
+  };
+
+  const currentUserId = getUserId();
+
   // Subscribe to Firebase testimonials on component mount
   useEffect(() => {
     const unsubscribe = subscribeToTestimonials((firebaseTestimonials) => {
@@ -153,6 +166,7 @@ const Testimonials = () => {
             : null,
         isUserSubmitted: true,
         createdAt: Date.now(),
+        userId: currentUserId, // Store the user ID who created this testimonial
       };
 
       // Save to Firebase
@@ -186,10 +200,24 @@ const Testimonials = () => {
     }
   };
 
-  const handleDeleteTestimonial = async (testimonialId) => {
+  const handleDeleteTestimonial = async (testimonialId, testimonial) => {
+    // Check if the testimonial belongs to the current user
+    if (testimonial.userId && testimonial.userId !== currentUserId) {
+      setFormStatus({
+        type: "error",
+        message: "You can only delete your own testimonials.",
+      });
+      return;
+    }
+
     try {
       await deleteTestimonial(testimonialId);
       // Firebase will automatically update the testimonials via the subscription
+      setFormStatus({
+        type: "success",
+        message: "Testimonial deleted successfully.",
+      });
+      setTimeout(() => setFormStatus({ type: "", message: "" }), 3000);
     } catch (error) {
       console.error("Error deleting testimonial:", error);
       setFormStatus({
@@ -550,26 +578,30 @@ const Testimonials = () => {
                               </div>
                             </div>
 
-                            {/* Delete Button for User Submitted Testimonials */}
-                            {testimonial.isUserSubmitted && (
-                              <button
-                                onClick={() => {
-                                  if (!isFirebaseConfigured) {
-                                    setFormStatus({
-                                      type: "error",
-                                      message:
-                                        "Firebase not configured. Cannot delete testimonials.",
-                                    });
-                                    return;
-                                  }
-                                  handleDeleteTestimonial(testimonial.id);
-                                }}
-                                className="absolute top-3 right-3 p-2 bg-red-500/20 border border-red-500/50 rounded-full hover:bg-red-500/40 transition-all duration-300 cursor-pointer"
-                                title="Delete testimonial"
-                              >
-                                <X className="w-2.5 h-2.5 text-red-400" />
-                              </button>
-                            )}
+                            {/* Delete Button for User Submitted Testimonials - Only for own testimonials */}
+                            {testimonial.isUserSubmitted &&
+                              testimonial.userId === currentUserId && (
+                                <button
+                                  onClick={() => {
+                                    if (!isFirebaseConfigured) {
+                                      setFormStatus({
+                                        type: "error",
+                                        message:
+                                          "Firebase not configured. Cannot delete testimonials.",
+                                      });
+                                      return;
+                                    }
+                                    handleDeleteTestimonial(
+                                      testimonial.id,
+                                      testimonial,
+                                    );
+                                  }}
+                                  className="absolute top-3 right-3 p-2 bg-red-500/20 border border-red-500/50 rounded-full hover:bg-red-500/40 transition-all duration-300 cursor-pointer"
+                                  title="Delete testimonial"
+                                >
+                                  <X className="w-2.5 h-2.5 text-red-400" />
+                                </button>
+                              )}
                           </div>
                         </div>
 
