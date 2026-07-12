@@ -336,8 +336,8 @@ const Testimonials = () => {
         {/* Testimonial Submission Form */}
         {showForm && (
           <FadeIn delay={100}>
-            <div className="max-w-2xl mx-auto mb-12">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 relative">
+            <div className="max-w-2xl mx-auto mb-12 px-4 md:px-0">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 relative">
                 <button
                   onClick={() => setShowForm(false)}
                   className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors cursor-pointer"
@@ -345,7 +345,7 @@ const Testimonials = () => {
                   <X className="w-5 h-5" />
                 </button>
 
-                <h3 className="text-2xl font-semibold text-white mb-2">
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">
                   Share Your Experience
                 </h3>
                 <p className="text-white/60 text-sm mb-6">
@@ -566,14 +566,14 @@ const Testimonials = () => {
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={testimonial.id}
-                    className="w-full shrink-0 px-4"
+                    className="w-full shrink-0 px-2 md:px-4"
                     style={{ scrollSnapAlign: "start" }}
                   >
                     <div className="max-w-4xl mx-auto">
-                      <div className="flex flex-col md:flex-row gap-6 items-stretch">
+                      <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-stretch">
                         {/* Image Section */}
                         <div className="relative w-full md:w-1/3">
-                          <div className="relative h-72 rounded-2xl overflow-hidden">
+                          <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden">
                             <img
                               src={testimonial.image}
                               alt={testimonial.name}
@@ -581,16 +581,16 @@ const Testimonials = () => {
                             />
 
                             {/* Stat Badge Overlay */}
-                            <div className="absolute bottom-4 left-4 right-4">
-                              <div className="bg-black/60 p-4 rounded-xl shadow-lg hover:bg-[red]/10 hover:border-primary/80 transition-all duration-300 hover:scale-103">
+                            <div className="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
+                              <div className="bg-black/60 p-3 md:p-4 rounded-xl shadow-lg hover:bg-[red]/10 hover:border-primary/80 transition-all duration-300 hover:scale-103">
                                 <div className="">
-                                  <div className="text-2xl font-semibold text-primary mb-1">
+                                  <div className="text-xl md:text-2xl font-semibold text-primary mb-1">
                                     {testimonial.customStat?.value ||
                                       testimonialStats[
                                         index % testimonialStats.length
                                       ]?.value}
                                   </div>
-                                  <div className="text-sm font-semibold text-gray-100">
+                                  <div className="text-xs md:text-sm font-semibold text-gray-100">
                                     {testimonial.customStat?.label ||
                                       testimonialStats[
                                         index % testimonialStats.length
@@ -627,30 +627,30 @@ const Testimonials = () => {
                           </div>
                         </div>
 
-                        <div className="flex-1 flex flex-col justify-between py-4">
+                        <div className="flex-1 flex flex-col justify-between py-3 md:py-4">
                           {/* Quotes */}
-                          <div className="mb-6">
-                            <Quote className="w-7 h-7 text-primary mb-4 opacity-50" />
-                            <p className="text-lg md:text-md text-white leading-relaxed">
+                          <div className="mb-4 md:mb-6">
+                            <Quote className="w-6 h-6 md:w-7 md:h-7 text-primary mb-3 md:mb-4 opacity-50" />
+                            <p className="text-base md:text-lg text-white leading-relaxed">
                               {testimonial.quote}
                             </p>
                           </div>
 
                           <div className="flex items-center justify-between">
                             <div>
-                              <div className="text-white font-semibold mb-1">
+                              <div className="text-white font-semibold text-base md:text-lg mb-1">
                                 {testimonial.name}
                               </div>
-                              <div className="text-white/60 text-sm">
+                              <div className="text-white/60 text-xs md:text-sm">
                                 {testimonial.role}, {testimonial.company}
                               </div>
                             </div>
 
-                            <div className="flex gap-1">
+                            <div className="flex gap-0.5 md:gap-1">
                               {[...Array(testimonial.rating)].map((_, i) => (
                                 <Star
                                   key={i}
-                                  className="w-4 h-4 fill-primary text-primary hover:scale-120"
+                                  className="w-3.5 h-3.5 md:w-4 md:h-4 fill-primary text-primary hover:scale-120"
                                 />
                               ))}
                             </div>
@@ -663,15 +663,15 @@ const Testimonials = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-2 mt-10">
+            <div className="flex items-center justify-center gap-2 mt-8 md:mt-10">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToIndex(index)}
                   className={`transition-all duration-300 rounded-full cursor-pointer hover:scale-120 ${
                     index === currentIndex
-                      ? "bg-white w-6 h-2"
-                      : "bg-white/30 w-2 h-2 hover:bg-white/50"
+                      ? "bg-white w-5 h-2 md:w-6 md:h-2"
+                      : "bg-white/30 w-2 h-2 md:w-2 md:h-2 hover:bg-white/50"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -680,7 +680,7 @@ const Testimonials = () => {
 
             <button
               onClick={prevTestimonial}
-              className="flex absolute right-283 top-1/2 -translate-y-1/2 -translate-x-2 lg:-translate-x-4 items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 cursor-pointer hover:scale-110 z-10"
+              className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 cursor-pointer hover:scale-110 z-10"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-6 h-6 text-white" />
@@ -688,10 +688,27 @@ const Testimonials = () => {
 
             <button
               onClick={nextTestimonial}
-              className="flex absolute right-0 top-1/2 -translate-y-1/2 -translate-x-2 lg:-translate-x-4 items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 cursor-pointer hover:scale-110 z-10"
+              className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 cursor-pointer hover:scale-110 z-10"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-6 h-6 text-white" />
+            </button>
+
+            {/* Mobile Navigation Buttons */}
+            <button
+              onClick={prevTestimonial}
+              className="md:hidden flex absolute left-2 top-1/2 -translate-y-1/2 items-center justify-center w-8 h-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 cursor-pointer hover:scale-110 z-10"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="w-5 h-5 text-white" />
+            </button>
+
+            <button
+              onClick={nextTestimonial}
+              className="md:hidden flex absolute right-2 top-1/2 -translate-y-1/2 items-center justify-center w-8 h-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 cursor-pointer hover:scale-110 z-10"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="w-5 h-5 text-white" />
             </button>
           </div>
         </FadeIn>
